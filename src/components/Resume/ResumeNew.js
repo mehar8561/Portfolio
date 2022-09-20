@@ -33,10 +33,17 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume">
-          <Document file={resumeLink} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+        <Row className="resume" className="d-flex justify-content-center">
+
+          <Document file={pdf} className="d-flex justify-content-center">
+            >
+          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6}/>
           </Document>
+          {/* <Document file={resumeLink} className="d-flex justify-content-center">
+            
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+           
+          </Document> */}
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
