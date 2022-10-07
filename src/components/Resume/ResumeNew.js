@@ -11,7 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 // const resumeLink ="/src/Assets/resumeMehardeep_1.pdf";
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
+  const [width, setWidth] = useState(1200)
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -37,8 +37,8 @@ function ResumeNew() {
 
           <Document file={pdf} className="d-flex justify-content-center">
             
-          <Page pageNumber={1} />
-          <Page pageNumber={2} />
+          <Page pageNumber={1} scale={width > 786 ? 1 : 0.6}/>
+          <Page pageNumber={2} scale={width > 786 ? 1 : 0.6}/>
           {/* <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6}/> */}
           </Document>
           {/* <Document file={resumeLink} className="d-flex justify-content-center">
